@@ -8,10 +8,11 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 
 $name2 = $_GET('name');
 //Strlen
+
 $mail2 = $_GET ('mail');
 $age2 = $_GET ('age');
 //
-echo $name2;
+var_dump($name2) ;
  
 
 
@@ -26,6 +27,6 @@ echo $name2;
     <title>Document</title>
 </head>
 <body>
-        <p><?php  echo $name ?></p>
+        <p><?php echo $name2 ?> </p>
 </body>
 </html>
