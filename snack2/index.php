@@ -1,19 +1,20 @@
 <!-- Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione)
 che name sia più lungo di 3 caratteri, 
-che mail contenga un punto e una chiocciola e che age sia un numero.
+che mail contenga un punto e una chiocciola e 
+che age sia un numero.
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
  -->
 <?php 
+$name = $_GET['name'];
+$mail = $_GET['mail'];
+$age = $_GET['age'];
+var_dump($mail);
 
-$name2 = $_GET('name');
-//Strlen
+$re = '/[A-z]@[A-z].[A-z]/m';
+$str = 'mail@mail.it';
 
-$mail2 = $_GET ('mail');
-$age2 = $_GET ('age');
-//
-var_dump($name2) ;
- 
+/* preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0); */
 
 
 
@@ -27,6 +28,17 @@ var_dump($name2) ;
     <title>Document</title>
 </head>
 <body>
-        <p><?php echo $name2 ?> </p>
+    
+        <p>Nome: <?php echo $name ?> </p>
+        <p>Età: <?php echo $age ?> </p>
+        <p>Email: <?php echo $mail ?> </p>
+    <?php 
+        if(strlen($_GET['name']) > 3 && is_numeric($_GET['age']) && strpos($_GET['mail'], "@") && strpos($_GET['mail'], ".")){
+            echo "Accesso Consentito";
+        }else{
+            echo "Accesso Negato";
+        }
+    ?>
+
 </body>
 </html>
