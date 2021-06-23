@@ -20,12 +20,12 @@ $ads = [
     [
         'image_path' => 'https://thumbs.dreamstime.com/z/back-to-school-sale-background-chalkboard-sale-percentages-marketing-poster-color-pencils-96751666.jpg',
         'link' => 'https://codepen.io',
-        'is_active' => false,
+        'is_active' => true,
     ],
     [
         'image_path' => 'https://foodsecurityfoodjustice.files.wordpress.com/2016/11/beyond-the-omlette-1.jpg',
         'link' => 'https://laravel.com',
-        'is_active' => false,
+        'is_active' => true,
     ],
     [
         'image_path' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRniLfGdFLxVOUoEwYC9WeRIrfZInB74_80IV8yMnANx3HTZYoQ',
@@ -37,13 +37,16 @@ $ads = [
 
 
 $actives=[];
+//estrapoliamo il value di ogni array
 foreach($ads as $value){
     /* var_dump($value); */
+    //se value contiiene is active, pushare in actives
     if ($value['is_active']){
         $actives[] = $value;
         /* var_dump($actives); */
     }
 }
+//conta $actives e prendine uno a caso\
 $ranNum = rand(0, (count($actives)))
 ?>
 <!DOCTYPE html>
@@ -55,7 +58,7 @@ $ranNum = rand(0, (count($actives)))
     <title>Document</title>
 </head>
 <body>
-    <p><?php echo $ranNum?></p>
+    <p>Pubblicità <?php echo $ranNum?></p>
     <img style="width:350px" src="<?php echo $actives[$ranNum]['image_path'] ?>" alt="">
 </body>
 </html>
