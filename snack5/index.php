@@ -7,9 +7,7 @@ Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo par
 $paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magni eius consequatur temporibus a eligendi! Dolores nihil maxime quaerat molestias deleniti iusto. Harum corrupti enim neque fugit inventore adipisci doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magni eius consequatur temporibus a eligendi! Dolores nihil maxime quaerat molestias deleniti iusto. Harum corrupti enim neque fugit inventore adipisci doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magni eius consequatur temporibus a eligendi! Dolores nihil maxime quaerat molestias deleniti iusto. Harum corrupti enim neque fugit inventore adipisci doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magni eius consequatur temporibus a eligendi! Dolores nihil maxime quaerat molestias deleniti iusto. Harum corrupti enim neque fugit inventore adipisci doloribus.";
 /* var_dump($paragrafo) */
 $paragrafi = explode(".", $paragrafo);
-$array = [];
-$array[] = $paragrafi;
-var_dump($array);
+var_dump($paragrafi);
 
 
 ?>
